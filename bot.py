@@ -32,7 +32,7 @@ async def on_ready():
 
 
 def extrair_texto_mensagem(message):
-texto = message.content or ""
+    texto = message.content or ""
 
 if message.embeds:
     for embed in message.embeds:
@@ -40,7 +40,7 @@ texto += "\n" + (embed.title or "")
 texto += "\n" + (embed.description or "")
 
 for field in embed.fields:
-texto += f"\n{field.name}\n{field.value}"
+    texto += f"\n{field.name}\n{field.value}"
 
 return texto.strip()
 
@@ -72,7 +72,7 @@ timeout=15
 
 print(f"Venda enviada pro Pushcut: {valor} | status={response.status_code}")
 else:
-print("Nenhum valor encontrado na mensagem de venda.")
+    print("Nenhum valor encontrado na mensagem de venda.")
 
 elif message.channel.id == CANAL_PERGUNTAS:
 texto = extrair_texto_mensagem(message)
