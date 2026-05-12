@@ -3,7 +3,7 @@ import requests
 import re
 import os
 
-TOKEN = os.environ.get("TOKEN")
+TOKEN = os.environ("TOKEN")
 PUSHCUT_API_KEY = "iJW7T1wzJjXB3hIwDjG7Z"
 
 CANAL_VENDAS = 1497420405894283479
