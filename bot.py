@@ -6,10 +6,10 @@ import os
 TOKEN = os.environ.get("TOKEN")
 PUSHCUT_API_KEY = "iJW7T1wzJjXB3hIwDjG7Z"
 
-CANAL_VENDAS = 1497420567568191589
+CANAL_VENDAS = 1497420405894283479
 CANAL_PERGUNTAS = 1497420606574952559
 
-PUSHCUT_VENDAS = "https://api.pushcut.io/iJW7T1wzJjXB3hIwDjG7Z/notifications/Venda%20Aprovada%F0%9F%92%B0"
+PUSHCUT_VENDAS = "https://api.pushcut.io/iJW7T1wzJjXB3hIwDjG7Z/notifications/Venda%20%F0%9F%92%B0"
 PUSHCUT_PERGUNTAS = "https://api.pushcut.io/iJW7T1wzJjXB3hIwDjG7Z/notifications/Pergunta%20Recebida%20%E2%9D%93"
 
 intents = discord.Intents.default()
