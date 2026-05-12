@@ -2,7 +2,7 @@ import discord
 import requests
 import re
 
-TOKEN = "MTUwMzUzNzI3NDQyNjQ5MDkwMA.GQiP3d.cvZgpPeGBrTFWS7-K1Mr_nXfYpmKLcdLW9swYw"
+TOKEN = os.environ.get("TOKEN")
 
 PUSHCUT_API_KEY = "iJW7T1wzJjXB3hIwDjG7Z"
 
