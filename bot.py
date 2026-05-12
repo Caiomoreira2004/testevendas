@@ -3,11 +3,11 @@ import requests
 import re
 import os
 
-TOKEN = os.environ("TOKEN")
-PUSHCUT_API_KEY = "iJW7T1wzJjXB3hIwDjG7Z"
 
-CANAL_VENDAS = 1497420405894283479
-CANAL_PERGUNTAS = 1497420606574952559
+TOKEN = os.getenv("TOKEN")
+PUSHCUT_API_KEY = os.getenv("iJW7T1wzJjXB3hIwDjG7Z")
+PUSHCUT_VENDAS = os.getenv("https://api.pushcut.io/iJW7T1wzJjXB3hIwDjG7Z/notifications/Venda%20%F0%9F%92%B0")
+PUSHCUT_PERGUNTAS = os.getenv("PUSHCUT_PERGUNTAS", "")
 
 PUSHCUT_VENDAS = "https://api.pushcut.io/iJW7T1wzJjXB3hIwDjG7Z/notifications/Venda%20%F0%9F%92%B0"
 PUSHCUT_PERGUNTAS = "https://api.pushcut.io/iJW7T1wzJjXB3hIwDjG7Z/notifications/Pergunta%20Recebida%20%E2%9D%93"
