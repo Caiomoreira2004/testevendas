@@ -36,8 +36,8 @@ def extrair_texto_mensagem(message):
 
 if message.embeds:
     for embed in message.embeds:
-texto += "\n" + (embed.title or "")
-texto += "\n" + (embed.description or "")
+        texto += "\n" + (embed.title or "")
+        texto += "\n" + (embed.description or "")
 
 for field in embed.fields:
     texto += f"\n{field.name}\n{field.value}"
