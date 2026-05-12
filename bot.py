@@ -12,13 +12,13 @@ CANAL_VENDAS = 1497420405894283479
 CANAL_PERGUNTAS = 1497420606574952559
 
 if not TOKEN:
-raise ValueError("A variável TOKEN não foi configurada no Railway.")
+    raise ValueError("A variável TOKEN não foi configurada no Railway.")
 
 if not PUSHCUT_API_KEY:
-raise ValueError("A variável PUSHCUT_API_KEY não foi configurada no Railway.")
+    raise ValueError("A variável PUSHCUT_API_KEY não foi configurada no Railway.")
 
 if not PUSHCUT_VENDAS:
-raise ValueError("A variável PUSHCUT_VENDAS não foi configurada no Railway.")
+    raise ValueError("A variável PUSHCUT_VENDAS não foi configurada no Railway.")
 
 intents = discord.Intents.default()
 intents.message_content = True
