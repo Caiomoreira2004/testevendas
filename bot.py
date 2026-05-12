@@ -28,14 +28,14 @@ client = discord.Client(intents=intents)
 
 @client.event
 async def on_ready():
-print(f"Bot online: {client.user}")
+    print(f"Bot online: {client.user}")
 
 
 def extrair_texto_mensagem(message):
 texto = message.content or ""
 
 if message.embeds:
-for embed in message.embeds:
+    for embed in message.embeds:
 texto += "\n" + (embed.title or "")
 texto += "\n" + (embed.description or "")
 
@@ -51,11 +51,11 @@ if client.user and message.author.id == client.user.id:
           return
 
 if message.channel.id == CANAL_VENDAS:
-texto = extrair_texto_mensagem(message)
+    texto = extrair_texto_mensagem(message)
 valores = re.findall(r"R\$\s*[\d.,]+", texto)
 
 if valores:
-for valor in valores:
+    for valor in valores:
 valor = valor.strip()
 
 response = requests.post(
@@ -80,10 +80,10 @@ nome = "Cliente desconhecido"
 
 match_nome = re.search(r"Cliente\s*\n(.+)", texto, re.IGNORECASE)
 if match_nome:
-nome = match_nome.group(1).strip()
+    nome = match_nome.group(1).strip()
 
 if PUSHCUT_PERGUNTAS:
-response = requests.post(
+    response = requests.post(
 PUSHCUT_PERGUNTAS,
 json={
 "title": "Pergunta Recebida!",
